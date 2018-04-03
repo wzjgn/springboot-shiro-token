@@ -23,7 +23,7 @@ public class ShiroConfig {
         return new MyRealm();
     }
 
-    @Bean("securityManager")
+    @Bean(name ="securityManager")
     public DefaultWebSecurityManager getManager() {
         DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
         // 使用自己的realm
@@ -42,7 +42,7 @@ public class ShiroConfig {
         return manager;
     }
 
-    @Bean("shiroFilter")
+    @Bean(name ="shiroFilter")
     public ShiroFilterFactoryBean factory(DefaultWebSecurityManager securityManager) {
         ShiroFilterFactoryBean factoryBean = new ShiroFilterFactoryBean();
 
